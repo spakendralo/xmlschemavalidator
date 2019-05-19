@@ -1,0 +1,33 @@
+@namespace("lu.pistache.avro")
+protocol UserInterface {
+
+  enum StatusEnum {
+    ALIVE,
+    KICKING,
+    DEAD
+  }
+
+  record Address {
+
+    int addressId;
+    union { null, string } Line1 = null;
+    union { null, string } Line2 = null;
+    union { null, string } Line3 = null;
+    union { null, string } Line4 = null;
+  }
+
+  record User {
+
+    long Id;
+
+    string Name;
+
+    string Surname = "Doe";
+
+    union { null, StatusEnum } Status = null;
+
+    union { null, Address } Address = null;
+
+    union { null, Address } AlternativeAddress = null;
+  }
+}

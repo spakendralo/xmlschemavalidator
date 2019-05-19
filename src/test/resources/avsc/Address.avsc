@@ -1,0 +1,25 @@
+{
+  "type" : "record",
+  "name" : "Address",
+  "namespace" : "lu.pistache.avro",
+  "fields" : [ {
+    "name" : "addressId",
+    "type" : "int"
+  }, {
+    "name" : "Line1",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "Line2",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "Line3",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "Line4",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

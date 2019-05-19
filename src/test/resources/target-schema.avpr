@@ -1,0 +1,58 @@
+{
+  "protocol" : "UserInterface",
+  "namespace" : "lu.pistache.avro",
+  "types" : [ {
+    "type" : "enum",
+    "name" : "StatusEnum",
+    "symbols" : [ "ALIVE", "KICKING", "DEAD" ]
+  }, {
+    "type" : "record",
+    "name" : "Address",
+    "fields" : [ {
+      "name" : "addressId",
+      "type" : "int"
+    }, {
+      "name" : "line1",
+      "type" : [ "null", "string" ],
+      "default" : null
+    }, {
+      "name" : "line2",
+      "type" : [ "null", "string" ],
+      "default" : null
+    }, {
+      "name" : "line3",
+      "type" : [ "null", "string" ],
+      "default" : null
+    }, {
+      "name" : "line4",
+      "type" : [ "null", "string" ],
+      "default" : null
+    } ]
+  }, {
+    "type" : "record",
+    "name" : "User",
+    "fields" : [ {
+      "name" : "id",
+      "type" : "long"
+    }, {
+      "name" : "name",
+      "type" : "string"
+    }, {
+      "name" : "surname",
+      "type" : "string"
+    }, {
+      "name" : "status",
+      "type" : [ "null", "StatusEnum" ],
+      "default" : null
+    }, {
+      "name" : "address",
+      "type" : [ "null", "Address" ],
+      "default" : null
+    }, {
+      "name" : "alternativeAddress",
+      "type" : [ "null", "Address" ],
+      "default" : null
+    } ]
+  } ],
+  "messages" : { }
+}

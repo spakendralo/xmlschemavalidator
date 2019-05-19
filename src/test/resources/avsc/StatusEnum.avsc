@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "StatusEnum",
+  "namespace" : "lu.pistache.avro",
+  "symbols" : [ "ALIVE", "KICKING", "DEAD" ]
+}
