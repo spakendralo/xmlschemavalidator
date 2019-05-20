@@ -1,0 +1,59 @@
+{
+  "type" : "record",
+  "name" : "User",
+  "namespace" : "lu.pistache.avro",
+  "fields" : [ {
+    "name" : "Id",
+    "type" : "long"
+  }, {
+    "name" : "Name",
+    "type" : "string"
+  }, {
+    "name" : "Surname",
+    "type" : "string",
+    "default" : "Doe"
+  },  {
+      "name" : "MaidenName",
+      "type" : [ "null", "string" ],
+      "default" : "Doe"
+  },  {
+    "name" : "Status",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "StatusEnum",
+      "symbols" : [ "ALIVE", "KICKING", "DEAD" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "Address",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "Address",
+      "fields" : [ {
+        "name" : "addressId",
+        "type" : "int"
+      }, {
+        "name" : "Line1",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "Line2",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "Line3",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "Line4",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "AlternativeAddress",
+    "type" : [ "null", "Address" ],
+    "default" : null
+  } ]
+}

@@ -13,7 +13,7 @@ import java.io.IOException;
 public class TestSimpleXmlCheck {
 
     @Test
-    public void simpleDatumCreation() throws ParserConfigurationException, IOException, SchemaValidationException, OperationNotSupportedException, SAXException {
+    public void simpleDatumCreation() throws ParserConfigurationException, IOException, SchemaValidationException, OperationNotSupportedException, SAXException, AvroObjectCreationException, ParseXmlException {
         String avroSchemaString = Tools.readFile("src/test/resources/avsc/User.avsc");
         String inputXml = Tools.readFile("src/test/resources/input.xml");
 

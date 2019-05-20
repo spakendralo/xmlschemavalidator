@@ -1,0 +1,11 @@
+<User>
+    <Id>123</Id>
+    <Name>John</Name>
+    <Surname>Doe</Surname>
+    <MaidenName>Davinci</MaidenName>
+    <Address>
+        <addressId>233</addressId>
+        <Line1>Handmaid street</Line1>
+        <Line2>Gilead</Line2>
+    </Address>
+</User>
